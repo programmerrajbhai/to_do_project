@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_project/Screens/Login_signUp/LoginScreen.dart';
+import 'package:to_do_project/Screens/main_bottom_nevScreens.dart';
 
 import 'Screens/Login_signUp/Email_InsertScreen.dart';
 import 'Screens/Login_signUp/SetPassword.dart';
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
 
 
         ),
+
+
+
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             fixedSize: Size.fromWidth(double.maxFinite),
@@ -41,6 +45,6 @@ class MyApp extends StatelessWidget {
 
       ),
       debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo', home: Signup());
+        title: 'Flutter Demo', home: MainBottomNevscreens());
   }
 }

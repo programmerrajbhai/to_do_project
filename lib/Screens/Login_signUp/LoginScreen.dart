@@ -32,12 +32,16 @@ class _LoginscreenState extends State<Loginscreen> {
           )),
           SizedBox(height: 20,),
           TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            textInputAction:TextInputAction.next,
             decoration: InputDecoration(
                 label: Text("Email")
             ),
           ),
           SizedBox(height: 20,),
           TextFormField(
+            keyboardType: TextInputType.text,
+            textInputAction:TextInputAction.done,
             decoration: InputDecoration(
                 label:Text('Password')
             ),
@@ -46,16 +50,18 @@ class _LoginscreenState extends State<Loginscreen> {
           SizedBox(
             height: 40,
             child: ElevatedButton(
-                onPressed: (){}, child: Icon(Icons.arrow_circle_right_outlined)),
+                onPressed: (){}, child: Icon(Icons.arrow_circle_right_outlined),
+            ),
           ),
           SizedBox(height: 30,),
           Center(
             child: Column(
               children: [
-                TextButton(onPressed: (){}, child: Text("Forgot Password")),
-
+                TextButton(onPressed: (){},
+                    child: Text("Forgot Password"),
+                ),
                 SizedBox(height: 10,),
-                RichText(text: TextSpan(
+                RichText(text: const TextSpan(
                     style: TextStyle(
                         color: Colors.black
                     ),
@@ -76,7 +82,7 @@ class _LoginscreenState extends State<Loginscreen> {
                 ))
               ],
             ),
-          )
+          ),
 
 
         ],
