@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_project/Screens/AddTaskScreens.dart';
 
+import '../../widget/List_Items_design.dart';
 import '../../widget/SummaryDashBoard.dart';
 
 class NewTaskScreen extends StatefulWidget {
@@ -21,68 +23,9 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
           Expanded(
             child: ListView.builder(itemBuilder: (contex, index){
               return
-                Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Here is Our Title to be Define",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                          'In this episode, we will add Social Media Style Like, Comment, and Share icons in the News Post desig'),
-                      Text(
-                        'Date: 02/04.2025',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12),
-                      ),
-                      SizedBox(height: 10,),
-
-                      Row(
-                        children: [
-                          Card(
-                            color: Colors.blueAccent,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 15,
-                                  vertical: 2
-                              ),
-                              child: TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "New",
-                                    style: TextStyle(color: Colors.white),
-                                  )),
-                            ),
-                          ),
-                          Spacer(),
-                          Row(
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.edit,
-                                  color: Colors.green,
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(
-                                  Icons.delete,
-                                  color: Colors.red,                        ),
-                              )
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
+                ListItems(
+                  status: 'New',
+                  colors: Colors.blueAccent,
                 );
             }),
           ),
@@ -91,7 +34,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: _onTapAddButtons,
         child: Icon(Icons.add),
       ),
     );
@@ -122,4 +65,9 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
       ),
     );
   }
+
+  void _onTapAddButtons(){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=> Addtaskscreens()));
+  }
+
 }

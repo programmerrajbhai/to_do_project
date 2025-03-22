@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_project/Screens/Login_signUp/LoginScreen.dart';
+import 'package:to_do_project/Screens/UpdateProfileScreens.dart';
 import 'package:to_do_project/Screens/main_bottom_nevScreens.dart';
 
 import 'Screens/Login_signUp/Email_InsertScreen.dart';
@@ -45,6 +46,6 @@ class MyApp extends StatelessWidget {
 
       ),
       debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo', home: MainBottomNevscreens());
+        title: 'Flutter Demo', home: Updateprofilescreens());
   }
 }
