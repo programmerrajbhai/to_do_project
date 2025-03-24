@@ -36,17 +36,22 @@ class _UpdateprofilescreensState extends State<Updateprofilescreens> {
               ),
               child: Row(
                 children: [
-                  Container(
-                    height: 50,
-                    width: 80,
-                    alignment: Alignment.center,
-                    child: Text('Photo',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),),
-                    decoration: BoxDecoration(
-                        color: Colors.grey.shade700,
-                      borderRadius: BorderRadius.circular(10)
+                  GestureDetector(
+                     onTap: (){
+                       _OnTapImagePicker();
+                     },
+                    child: Container(
+                      height: 50,
+                      width: 80,
+                      alignment: Alignment.center,
+                      child: Text('Photo',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),),
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade700,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
                     ),
                   ),
                   SizedBox(width: 10,),
@@ -100,4 +105,12 @@ class _UpdateprofilescreensState extends State<Updateprofilescreens> {
       ),
     );
   }
+
+
+
+  _OnTapImagePicker(){
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Work")));
+  }
+
+
 }
